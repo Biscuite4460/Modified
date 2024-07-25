@@ -1,0 +1,35 @@
+#include <vcl.h>
+#pragma hdrstop
+
+#include "StartupForm.h"
+#include "uDataMod.h" // Ensure this is included to access DM
+#include "uMainForm.h" // Ensure this is included to access MainForm
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TStartupForm *StartupForm;
+//---------------------------------------------------------------------------
+__fastcall TStartupForm::TStartupForm(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TStartupForm::Button1Click(TObject *Sender)
+{
+    DM->SetDatabaseConfig(TDatabaseType::SQLite, "SQLiteDBPath", "", "", "");
+    DM->InitializeDatabase();
+    Application->CreateForm(__classid(TMainForm), &MainForm);
+    MainForm->Show();
+    this->Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall TStartupForm::Button2Click(TObject *Sender)
+{
+    DM->SetDatabaseConfig(TDatabaseType::Oracle, "OracleDB", "username", "password", "server");
+    DM->InitializeDatabase();
+    Application->CreateForm(__classid(TMainForm), &MainForm);
+    MainForm->Show();
+    this->Close();
+}
+//---------------------------------------------------------------------------
+

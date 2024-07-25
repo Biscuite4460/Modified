@@ -1,0 +1,35 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include "uDataMod.h"
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TRadioGroup *RadioGroup1;
+	TButton *Button1;
+	TButton *Button2;
+	TLabel *Label1;
+	TLabel *Label2;
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+	void TForm1::CloseAllSecondaryForms();
+	void TForm1::ReopenAllSecondaryForms();
+	void InitializeDatabaseAndForms(TDatabaseType dbType, const UnicodeString &dbPathOrName,
+								const UnicodeString &username, const UnicodeString &password,
+								const UnicodeString &server);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

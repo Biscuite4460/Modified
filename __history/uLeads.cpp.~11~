@@ -1,0 +1,368 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "uLeads.h"
+#include "uMainForm.h"
+#include "uDataMod.h"
+#include "uProposal.h"
+#include "uDraftProposal.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TLeadsForm *LeadsForm;
+//---------------------------------------------------------------------------
+
+__fastcall TLeadsForm::TLeadsForm(TComponent* Owner)
+	: TForm(Owner)
+{
+	StatusComboBox->OnChange = StatusComboBoxChange;
+	if (this->LeadsBindSourceDB != nullptr && this->LeadsBindSourceDB->DataSet != nullptr) {
+		UpdateFieldsVisibility();
+	}
+}
+
+void __fastcall TLeadsForm::RefreshFormsPublic(){
+	Invalidate();
+}
+
+void __fastcall TLeadsForm::LocateLead(int AIndex)
+{
+    // Check for LeadsBindSourceDB and its DataSet's validity before attempting to locate a lead.
+    if (this->LeadsBindSourceDB == nullptr) {
+        ShowMessage("LeadsBindSourceDB is not initialized.");
+        return;
+    }
+    if (this->LeadsBindSourceDB->DataSet == nullptr) {
+        ShowMessage("LeadsBindSourceDB's DataSet is not initialized.");
+        return;
+    }
+    if (!this->LeadsBindSourceDB->DataSet->Active) {
+        ShowMessage("LeadsBindSourceDB's DataSet is not active.");
+        return;
+    }
+
+    // Try-catch block to capture any exceptions during Locate
+    try {
+        // If the LeadId is 0, skip the locate operation.
+        if (AIndex == 0) {
+            return;
+        }
+
+        if (!this->LeadsBindSourceDB->DataSet->Locate("LeadId", VarArrayOf(OPENARRAY(Variant, (AIndex))), TLocateOptions())) {
+            ShowMessage("Lead with ID " + IntToStr(AIndex) + " could not be located.");
+        }
+    }
+    catch (const Exception &e) {
+        ShowMessage("Exception in LocateLead: " + e.Message);
+    }
+}
+
+// Modify this method to refresh leads based on the status
+void RefreshLeadsGrid() {
+    try {
+        String statusFilter = "ACTIVE";  // Example status
+        LeadsQuery->Close();
+        LeadsQuery->SQL->Text = "SELECT * FROM LEADS WHERE UPPER(STATUS) = :Status";
+        LeadsQuery->ParamByName("Status")->AsString = statusFilter.UpperCase();
+        LeadsQuery->Open();
+        LeadsGrid->DataSource->DataSet->Refresh(); // Refresh the grid dataset
+    } catch (const Exception &e) {
+        ShowMessage("Error refreshing leads grid: " + e.Message);
+    }
+}
+
+// Call RefreshLeadsGrid after any operation that might change the data visible in the grids:
+// For example, after inserting a new lead, updating a lead, or changing the status of a lead.
+
+
+
+void __fastcall TLeadsForm::DateContactedPickerChange( TObject* Sender )
+{
+  if ( (double)((TDateTimePicker*)( Sender ))->DateTime == 0.0 ) {
+	((TDateTimePicker*)( Sender ))->Format = L" ";
+  } else {
+	((TDateTimePicker*)( Sender ))->Format = L"";
+  }
+}
+
+
+void __fastcall TLeadsForm::DeleteDocButtonClick( TObject* Sender )
+{
+  if ( DocsBindSourceDB->DataSet->RecordCount > 0 )
+  {
+	if ( MessageDlg( "Delete " + DocsBindSourceDB->DataSet->FieldByName( L"DocumentName" )->AsString + "?", mtConfirmation, TMsgDlgButtons() << mbYes << mbNo, 0, mbYes ) == mrYes )
+	{
+	  DocsBindSourceDB->DataSet->Delete();
+	}
+  }
+}
+
+
+void __fastcall TLeadsForm::DetailRelativePanelResize( TObject* Sender )
+{
+  if ( DetailRelativePanel->Width < 936 )
+  {
+	DetailRelativePanel->ControlCollection->Items[1]->Below = FormPanel;
+    DetailRelativePanel->ControlCollection->Items[1]->AlignRightWithPanel = false;
+    DetailRelativePanel->ControlCollection->Items[1]->AlignTopWithPanel = false;
+	DetailRelativePanel->ControlCollection->Items[1]->AlignLeftWithPanel = true;
+  }
+  else
+  {
+    DetailRelativePanel->ControlCollection->Items[1]->Below = NULL;
+    DetailRelativePanel->ControlCollection->Items[1]->AlignLeftWithPanel = false;
+	DetailRelativePanel->ControlCollection->Items[1]->AlignRightWithPanel = true;
+    DetailRelativePanel->ControlCollection->Items[1]->AlignTopWithPanel = true;
+  }
+}
+
+void __fastcall TLeadsForm::LeadRelativePanelResize( TObject* Sender )
+{
+  if ( LeadRelativePanel->Width <= 800 )
+  {
+	CreateProposalButton->Caption = L"";
+    CreateProposalButton->Width = 40;
+    ViewProposalButton->Caption = L"";
+	ViewProposalButton->Width = 40;
+    CancelProposalButton->Caption = L"";
+    CancelProposalButton->Width = 40;
+    CompleteProposalButton->Caption = L"";
+    CompleteProposalButton->Width = 40;
+  }
+  else
+  {
+    CreateProposalButton->Caption = CreateProposalButton->Hint;
+    CreateProposalButton->Width = 185;
+    ViewProposalButton->Caption = ViewProposalButton->Hint;
+    ViewProposalButton->Width = 185;
+	CancelProposalButton->Caption = CancelProposalButton->Hint;
+    CancelProposalButton->Width = 185;
+    CompleteProposalButton->Caption = CompleteProposalButton->Hint;
+	CompleteProposalButton->Width = 185;
+  }
+}
+
+
+void __fastcall TLeadsForm::LinkControlToField10AssignedValue( TObject* Sender, TBindingAssignValueRec &AssignValueRec,
+		  const TValue &Value )
+{
+  DateContactedPickerChange( DateContactedPicker );
+}
+
+
+void __fastcall TLeadsForm::LinkControlToField6AssignedValue( TObject* Sender, TBindingAssignValueRec &AssignValueRec,
+		  const TValue &Value )
+{
+  DateContactedPickerChange( DateCreatedPicker );
+}
+
+
+void __fastcall TLeadsForm::LinkControlToField8AssignedValue( TObject* Sender, TBindingAssignValueRec &AssignValueRec,
+		  const TValue &Value )
+{
+  DateContactedPickerChange( DateDraftedPicker );
+}
+
+
+void __fastcall TLeadsForm::LinkControlToField9AssignedValue( TObject* Sender, TBindingAssignValueRec &AssignValueRec,
+		  const TValue &Value )
+{
+  DateContactedPickerChange( DateClosedPicker );
+}
+
+void __fastcall TLeadsForm::AddDocButtonClick(TObject* Sender)
+{
+	try
+	{
+		if (!DocsBindSourceDB->DataSet->Active)
+			DocsBindSourceDB->DataSet->Open();
+
+		// Append a new record
+		DocsBindSourceDB->DataSet->Append();
+		DocsBindSourceDB->DataSet->Edit();
+
+		// Set field values
+		DocsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger = LeadsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger;
+		DocsBindSourceDB->DataSet->FieldByName("DocumentName")->AsString = ExtractFileName(OpenDialog1->FileName);
+
+		// Load document from file
+		TBlobField *documentField = dynamic_cast<TBlobField*>(DocsBindSourceDB->DataSet->FieldByName("Document"));
+		if (documentField)
+		{
+			TStream *fileStream = new TFileStream(OpenDialog1->FileName, fmOpenRead);
+			try
+			{
+				documentField->LoadFromStream(fileStream);
+			}
+			__finally
+			{
+				delete fileStream;
+			}
+		}
+
+		// Set Username
+		DocsBindSourceDB->DataSet->FieldByName("Username")->AsString = UsersBindSourceDB->DataSet->FieldByName("Username")->AsString;
+
+		// Post changes
+		DocsBindSourceDB->DataSet->Post();
+	}
+	catch (const Exception &E)
+	{
+		ShowMessage("An error occurred while adding a document: " + E.Message);
+	}
+}
+
+void __fastcall TLeadsForm::CancelProposalButtonClick(TObject* Sender)
+{
+	try
+	{
+		int leadId = LeadsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger;
+		DM->UpdateProposalStatus(leadId, L"Canceled");
+	}
+	catch (const Exception &E)
+	{
+		ShowMessage("An error occurred while canceling the proposal: " + E.Message);
+	}
+}
+
+void __fastcall TLeadsForm::CompleteProposalButtonClick(TObject* Sender)
+{
+	try
+	{
+		int leadId = LeadsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger;
+		DM->CompleteProposal(leadId);
+	}
+	catch (const Exception &E)
+	{
+		ShowMessage("An error occurred while completing the proposal: " + E.Message);
+	}
+}
+
+
+void __fastcall TLeadsForm::CreateProposalButtonClick(TObject* Sender)
+{
+	try
+	{
+		int leadId = LeadsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger;
+		if (!ProposalBindSourceDB->DataSet->Locate("LeadId", Variant(leadId), TLocateOptions()))
+		{
+			DraftProposalForm->NewDraft(leadId, LeadsBindSourceDB->DataSet->FieldByName("AccountName")->AsString);
+			DraftProposalForm->ShowModal();
+		}
+		else
+		{
+			ShowMessage("This lead already has a proposal.");
+		}
+	}
+	catch (const Exception &E)
+	{
+		ShowMessage("An error occurred while creating a proposal: " + E.Message);
+	}
+}
+
+
+void __fastcall TLeadsForm::ViewDocButtonClick(TObject* Sender)
+{
+	try
+	{
+		int leadId = LeadsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger;
+		if (DocsBindSourceDB->DataSet->RecordCount > 0)
+		{
+			String documentName = ExtractFileName(DocsBindSourceDB->DataSet->FieldByName("DocumentName")->AsString);
+			TBlobField *documentField = dynamic_cast<TBlobField*>(DocsBindSourceDB->DataSet->FieldByName("Document"));
+			if (documentField)
+			{
+				String tempFilePath = TPath::Combine(TPath::GetTempPath(), documentName);
+				documentField->SaveToFile(tempFilePath);
+				ShellExecute(Handle, NULL, tempFilePath.c_str(), NULL, NULL, SW_SHOWNORMAL);
+			}
+		}
+		else
+		{
+			ShowMessage("No document available.");
+		}
+	}
+	catch (const Exception &E)
+	{
+		ShowMessage("An error occurred while viewing the document: " + E.Message);
+	}
+}
+
+
+void __fastcall TLeadsForm::ViewProposalButtonClick(TObject* Sender)
+{
+	try
+	{
+		int leadId = LeadsBindSourceDB->DataSet->FieldByName("LeadId")->AsInteger;
+		if (ProposalBindSourceDB->DataSet->Locate("LeadId", Variant(leadId), TLocateOptions()))
+		{
+			TBlobField *proposalField = dynamic_cast<TBlobField*>(ProposalBindSourceDB->DataSet->FieldByName("Proposal"));
+			if (proposalField)
+			{
+				String tempFilePath = TPath::Combine(TPath::GetTempPath(), "Proposal_" + IntToStr(leadId) + ".pdf");
+				proposalField->SaveToFile(tempFilePath);
+				ShellExecute(Handle, NULL, tempFilePath.c_str(), NULL, NULL, SW_SHOWNORMAL);
+			}
+		}
+		else
+		{
+			ShowMessage("No proposal available for this lead.");
+		}
+	}
+	catch (const Exception &E)
+	{
+		ShowMessage("An error occurred while viewing the proposal: " + E.Message);
+	}
+}
+
+//---------------------------------------------------------------------------
+
+void TLeadsForm::UpdateFieldsVisibility()
+{
+	TThread::Synchronize(nullptr, [&]() {
+		UnicodeString currentStatus = StatusComboBox->Text;
+
+		// Determine visibility
+		bool isClosed = currentStatus == L"Closed";
+		bool isInactive = currentStatus == L"Inactive";
+		bool isNew = currentStatus == L"New";
+		bool isActive = currentStatus == L"Active";
+
+		// Set visibility for "Date Drafted"
+		DateDraftedPicker->Visible = !isClosed && !isNew && !isActive;
+		Label13->Visible = DateDraftedPicker->Visible; // This is the label for "Date Drafted"
+
+		// Set visibility for "Date Closed"
+		DateClosedPicker->Visible = !isInactive && !isNew && !isActive;
+		Label12->Visible = DateClosedPicker->Visible; // This is the label for "Date Closed"
+
+		// Repositioning - Assuming that DateClosedPanel follows DateDraftedPanel
+		// If "Date Drafted" is invisible, "Date Closed" should move up
+		if (!DateDraftedPicker->Visible && DateClosedPicker->Visible)
+		{
+			DateClosedPanel->Top = DateDraftedPanel->Top;
+			DateClosedPicker->Top = DateDraftedPicker->Top;
+			Label12->Top = Label13->Top;
+		}
+		else
+		{
+			// Reset back to original positions if they have been changed
+			// These values need to be adjusted to whatever your form's original layout is
+			DateClosedPanel->Top = 20;/* original Top value for DateClosedPanel */;
+			DateClosedPicker->Top = 20;/* original Top value for DateClosedPicker */;
+			Label12->Top = 20; /* original Top value for Label12 */;
+		}
+
+		// Further repositioning logic here, if needed for other components
+	});
+}
+
+
+void __fastcall TLeadsForm::StatusComboBoxChange(TObject *Sender)
+{
+	UpdateFieldsVisibility();
+}
+//---------------------------------------------------------------------------
+

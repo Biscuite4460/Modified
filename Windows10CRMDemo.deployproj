@@ -1,0 +1,2223 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'">
+        <DeployFile Include="$(BDS)\Redist\Win64\FireDACSqliteDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACSqliteDriver290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\intl\gdsintl.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\intl\</RemoteDir>
+            <RemoteName>gdsintl.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDACCommonDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64\ibclient64.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibclient64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxmss9.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss9.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_44.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\inet290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>inet290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frxe29.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frxe29.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(Platform)\$(Configuration)\AppxManifest.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>AppxManifest.xml</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxint.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxint.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\midas.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>midas.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\bindengine290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindengine290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxmys.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmys.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frxe29.dcp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frxe29.dcp</RemoteName>
+            <DeployClass>DependencyPackageDebugSymbols</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\xmlrtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>xmlrtl290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDACIBDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACIBDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frLocalizationLibrary29.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frLocalizationLibrary29.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxdb2.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxdb2.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_ibtogo.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_ibtogo.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\IndySystem290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndySystem290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\FireDACOracleDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACOracleDriver290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclWinX290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclWinX290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclx290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclx290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDACCommon290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommon290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\xmlrtl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>xmlrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vclFireDAC290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclFireDAC290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\license.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\interbase.msg" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frGraphicsLibrary29.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frGraphicsLibrary29.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxase.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxase.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\BorlndMM.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>BorlndMM.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxadapter.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxadapter.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxasa.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxasa.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDACCommonDriver290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxmss9.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss9.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\emsserverresource290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverresource290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_44.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include=".\Win64\Debug\Windows10CRMDemo.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>Windows10CRMDemo.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\ibtogo64.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibtogo64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\inet290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>inet290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(Platform)\$(Configuration)\AppxManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>AppxManifest.xml</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\DBXCommonDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>DBXCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\midas.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>midas.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\ADMIN.IB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>ADMIN.IB</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxmys.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmys.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\EMSDevServerCommand.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServerCommand.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vclie290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclie290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frGraphicsLibrary29.dcp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frGraphicsLibrary29.dcp</RemoteName>
+            <DeployClass>DependencyPackageDebugSymbols</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\bindcomp290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindcomp290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\rtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>rtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDACIBDriver290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACIBDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclFireDAC290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclFireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxora.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxora.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbrtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\FireDAC290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDAC290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\IndyProtocols290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyProtocols290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\ibxml64.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibxml64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64\interbase.msg" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\dbrtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbrtl290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vcldb290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcldb290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\EMSDevServer.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServer.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_150.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\license.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\BorlndMM.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>BorlndMM.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\IndyCore290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyCore290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxasa.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxasa.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\FireDACCommonDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommonDriver290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\ib_util64.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ib_util64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\fs29.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>fs29.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxmss.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDAC290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxfb.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxfb.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\emsserverresource290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverresource290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frCoreLibrary29.dcp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frCoreLibrary29.dcp</RemoteName>
+            <DeployClass>DependencyPackageDebugSymbols</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\ibtogo64.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibtogo64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxinf.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxinf.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\DBXCommonDriver290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>DBXCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vcl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\ADMIN.IB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>ADMIN.IB</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vclimg290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclimg290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\emsserverapi290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverapi290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\EMSDevServerCommand.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServerCommand.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\rtl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>rtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclimg290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclimg290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclFireDAC290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclFireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxora.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxora.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbrtl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vcl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcl290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\IndyProtocols290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyProtocols290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\ibxml64.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibxml64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64\interbase.msg" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\cc64290.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>cc64290.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vcldb290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcldb290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\EMSDevServer.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServer.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_150.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vcledge290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcledge290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\IndyCore290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyCore290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frx29.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frx29.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\ib_util64.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ib_util64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxmss.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frCoreLibrary29.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frCoreLibrary29.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\intl\gdsintl.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\intl\</RemoteDir>
+            <RemoteName>gdsintl.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDAC290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64\ibclient64.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibclient64.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxfb.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxfb.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxinf.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxinf.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxint.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxint.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vcl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vclx290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclx290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\bindengine290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindengine290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\borlndmm.dll" Condition="'$(UsingDelphiRTL)'=='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>borlndmm.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\emsserverapi290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverapi290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclimg290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclimg290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\rtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>rtl290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxdb2.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxdb2.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_ibtogo.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_ibtogo.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frx29.dcp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frx29.dcp</RemoteName>
+            <DeployClass>DependencyPackageDebugSymbols</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\IndySystem290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndySystem290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\frLocalizationLibrary29.dcp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>frLocalizationLibrary29.dcp</RemoteName>
+            <DeployClass>DependencyPackageDebugSymbols</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclWinX290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclWinX290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\vclx290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclx290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\FireDACCommon290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommon290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\xmlrtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>xmlrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\FireDACCommon290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommon290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\cc64290mt.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>cc64290mt.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win64_togo\interbase\interbase.msg" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\bindcompvcl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindcompvcl290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\vclwinx290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclwinx290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxase.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxase.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin64\dbxadapter.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxadapter.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Win64\bindengine290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindengine290.bpl</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="C:\Users\hamoz\OneDrive\Documente\Embarcadero\Studio\23.0\CatalogRepository\FastReport-2023.3\RS29\VCL\Win64\fs29.dcp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>fs29.dcp</RemoteName>
+            <DeployClass>DependencyPackageDebugSymbols</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="$(BDS)\bin\FireDACCommon290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommon290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\DBXCommonDriver290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>DBXCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\emsserverapi290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverapi290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxase.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxase.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\IndyCore290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyCore290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32c290.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>cc32c290.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32c290mt.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>cc32c290mt.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxmys.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmys.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\license.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\interbase.msg" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\BorlndMM.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>BorlndMM.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\inet290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>inet290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclx290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclx290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32\interbase.msg" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(Platform)\$(Configuration)\AppxManifest.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>AppxManifest.xml</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\EMSDevServer.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServer.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbrtl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclFireDAC290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclFireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_ibtogo.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_ibtogo.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\ibtogo.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibtogo.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxinf.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxinf.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\rtl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>rtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\EMSDevServerCommand.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServerCommand.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxfb.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxfb.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxora.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxora.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDACIBDriver290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACIBDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\ib_util.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ib_util.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxasa.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxasa.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\xmlrtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>xmlrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDACCommon290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommon290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\emsserverresource290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverresource290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\emsserverapi290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverapi290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxint.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxint.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vcldb290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcldb290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\IndyCore290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyCore290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxmys.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmys.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32\gds32.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>gds32.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\interbase.msg" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_150.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclimg290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclimg290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\inet290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>inet290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclx290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclx290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(Platform)\$(Configuration)\AppxManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>AppxManifest.xml</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\ibxml.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibxml.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\IndySystem290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndySystem290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vcl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\ADMIN.IB" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>ADMIN.IB</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclFireDAC290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclFireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_ibtogo.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_ibtogo.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxmss9.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss9.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDAC290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxinf.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxinf.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\IndyProtocols290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyProtocols290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\EMSDevServerCommand.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServerCommand.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxdb2.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxdb2.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxfb.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxfb.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxora.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxora.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\ib_util.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ib_util.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxasa.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxasa.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\xmlrtl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>xmlrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\emsserverresource290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>emsserverresource290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxint.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxint.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vcldb290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcldb290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\bindengine290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindengine290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32290mt.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>cc32290mt.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32\gds32.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>gds32.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_150.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\intl\gdsintl.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\intl\</RemoteDir>
+            <RemoteName>gdsintl.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclimg290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclimg290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_44.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\ibxml.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibxml.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\IndySystem290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndySystem290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vcl290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vcl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\ADMIN.IB" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>ADMIN.IB</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\oss_license_notice.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>oss_license_notice.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\reg_iblite.txt" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\license\</RemoteDir>
+            <RemoteName>reg_iblite.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxmss9.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss9.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclWinX290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclWinX290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDAC290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDAC290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\IndyProtocols290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>IndyProtocols290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxdb2.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxdb2.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxadapter.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxadapter.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDACCommonDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxmss.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\midas.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>midas.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\cc32290.dll" Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>cc32290.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\DBXCommonDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>DBXCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxase.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxase.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\bindengine290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>bindengine290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\license.txt" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\interbase\</RemoteDir>
+            <RemoteName>license.txt</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\BorlndMM.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>BorlndMM.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\interbase\intl\gdsintl.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\interbase\intl\</RemoteDir>
+            <RemoteName>gdsintl.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\Assest\</RemoteDir>
+            <RemoteName>delphi_UwpDefault_44.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32\interbase.msg" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>interbase.msg</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\EMSDevServer.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>EMSDevServer.exe</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbrtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbrtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(IBREDISTDIR)\win32_togo\ibtogo.dll" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>ibtogo.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\vclWinX290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>vclWinX290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\rtl290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>rtl290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxadapter.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxadapter.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\borlndmm.dll" Condition="'$(UsingDelphiRTL)'=='true'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>borlndmm.dll</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDACCommonDriver290.bpl" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACCommonDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\dbxmss.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>dbxmss.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\FireDACIBDriver290.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>FireDACIBDriver290.bpl</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\midas.dll" Condition="'$(Config)'=='Release'">
+            <RemoteDir>Windows10CRMDemo\</RemoteDir>
+            <RemoteName>midas.dll</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+</Project>
